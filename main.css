@@ -1,5 +1,5 @@
 :root {
-    --green: green;
+    --green: #20bb00;
     --red: red;
 }
 body {
@@ -35,8 +35,11 @@ body {
     background: gray;
     
 }
-.shadow{
-    box-shadow: 0 0 20px var(--green), 0 0 20px var(--green), 0 0 20px var(--green);
+.correct{
+    box-shadow: 0 0 15px 10px var(--green);
+}
+.wrong{
+    box-shadow: 0 0 15px 10px var(--red);
 }
 .name{
     font-weight: 700;
