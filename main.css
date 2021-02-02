@@ -1,11 +1,12 @@
 :root {
     --green: #20bb00;
     --red: red;
-    --barblue: #064f62;
-    --barorange: #754514;
+    --barblue:#0f2630;
+    --barorange: #2e2416;
     --darkblue: #010c10;
     --blue: #31C4F3;
     --orange: #F89A2C;
+    --navy: #033C54 ;
     --transparent: rgba(255,0,0,0);
 }
 body {
@@ -64,7 +65,7 @@ body {
     background: var(--orange);
 }
 .navy{
-    background: #033C54;
+    background: var(--navy);
 }
 .parallelogram{
     font-size: 4rem;
@@ -74,15 +75,15 @@ body {
     display: grid; 
 }
 .team-left{
-    border: 5px solid #31C4F3;
-    border-bottom: 7px solid #31C4F3;
+    border: 5px solid var(--blue);
+    border-bottom: 7px solid var(--blue);
     grid-template-columns: 4fr 1fr;
     grid-template-rows: 1fr;
 }
 .team-right{
-    border: 5px solid #F89A2C;
-    border-bottom: 7px solid #F89A2C;
-    border-right: 6px solid #F89A2C;
+    border: 5px solid var(--orange);
+    border-bottom: 7px solid var(--orange);
+    border-right: 6px solid var(--orange);
     grid-template-columns: 1fr 4fr;
     grid-template-rows: 1fr; 
 }
