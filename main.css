@@ -1,6 +1,12 @@
 :root {
     --green: #20bb00;
     --red: red;
+    --barblue: #064f62;
+    --barorange: #754514;
+    --darkblue: #010c10;
+    --blue: #31C4F3;
+    --orange: #F89A2C;
+    --transparent: rgba(255,0,0,0);
 }
 body {
     padding: 0;
@@ -17,6 +23,8 @@ body {
     grid-gap: 200px;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
+    z-index: 2;
+    position: relative;
 }
 .team {
     /*color: white;*/
@@ -47,13 +55,13 @@ body {
     color: white;
 }
 .darkblue{
-    background: #010c10;
+    background: var(--darkblue)
 }
 .blue{
-    background: #31C4F3;
+    background: var(--blue)
 }
 .orange{
-    background: #F89A2C;
+    background: var(--orange);
 }
 .navy{
     background: #033C54;
@@ -92,6 +100,8 @@ body {
     font-weight: 900;
 } 
 .score{
+    position: relative;
+    z-index: 2;
     height:140px;
     width:1720px;
     margin-top:60px;
@@ -101,3 +111,38 @@ body {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
 }
+.bganim{
+    height: 760px;
+    z-index: 1;
+    position: absolute;
+}
+.bar {
+    animation: anim 8s ease-in-out infinite alternate;
+    background-image: repeating-linear-gradient(-70deg, var(--transparent) 20%, var(--barorange) 20%, var(--barorange) 21%, var(--transparent) 21%, var(--transparent) 34%, var(--barblue) 34%, var(--barblue) 37%, var(--transparent) 37% ,var(--transparent) 45% );
+    bottom:0;
+    left:-50%;
+    opacity:1;
+    position:fixed;
+    right:-50%;
+    top:0;
+    z-index:1;
+} 
+.bar2 {
+    animation-direction: alternate-reverse;
+    background-image: repeating-linear-gradient(-70deg, var(--transparent) 20%, var(--barblue) 20%, var(--barblue) 21%, var(--transparent) 21%, var(--transparent) 34%, var(--barorange) 34%, var(--barorange) 37%, var(--transparent) 37% ,var(--transparent) 45% );
+    animation-duration:10s;
+    animation-delay: -2s;
+    opacity:.4;
+    z-index: -1;
+} 
+.bar3 {
+    animation-duration:12s;
+}
+@keyframes anim {
+    0% {
+      transform:translateX(-10%);
+    }
+    100% {
+      transform:translateX(10%);
+    }
+  }
