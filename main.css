@@ -1,3 +1,21 @@
+@font-face {
+    font-family: HelveticaNeue;
+    src: url("Assets for Digital/3. HSQS Assets/2. Fonts/Helvetica Neue - OTF/HelveticaNeueLTStd-BdCn.otf") ;
+    font-weight: bold;
+    font-stretch: condensed;
+}
+@font-face {
+    font-family: HelveticaNeue;
+    src: url("Assets for Digital/3. HSQS Assets/2. Fonts/Helvetica Neue - OTF/HelveticaNeueLTStd-HvCn.otf") ;
+    font-weight: 900;
+    font-stretch: condensed;
+}
+@font-face {
+    font-family: HelveticaNeue;
+    src: url("Assets for Digital/3. HSQS Assets/2. Fonts/Helvetica Neue - OTF/HelveticaNeueLTStd-MdCn.otf") ;
+    font-weight: normal;
+    font-stretch: condensed;
+}
 :root {
     --green: #20bb00;
     --red: red;
@@ -12,8 +30,9 @@
 body {
     padding: 0;
     margin: 0;
-    font-family: 'Roboto' , sans-serif;
+    font-family: 'Roboto', HelveticaNeue , sans-serif;
     text-transform: uppercase;
+    font-stretch: condensed;
 }
 .container {
     height: 760px;
@@ -35,6 +54,7 @@ body {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     grid-gap: 40px;
+
 }
 .square {   
     text-align: center;
@@ -51,9 +71,12 @@ body {
     box-shadow: 0 0 15px 10px var(--red);
 }
 .name{
-    font-weight: 700;
+    font-weight: bold;
     text-align: center;
     color: white;
+}
+.team-name{
+    font-weight: normal;
 }
 .darkblue{
     background: var(--darkblue)
