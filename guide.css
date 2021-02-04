@@ -1,0 +1,161 @@
+@font-face {
+    font-family: HelveticaNeue;
+    src: url("Assets for Digital/3. HSQS Assets/2. Fonts/Helvetica Neue - OTF/HelveticaNeueLTStd-BdCn.otf") ;
+    font-weight: bold;
+    font-stretch: condensed;
+}
+@font-face {
+    font-family: HelveticaNeue;
+    src: url("Assets for Digital/3. HSQS Assets/2. Fonts/Helvetica Neue - OTF/HelveticaNeueLTStd-HvCn.otf") ;
+    font-weight: 900;
+    font-stretch: condensed;
+}
+@font-face {
+    font-family: HelveticaNeue;
+    src: url("Assets for Digital/3. HSQS Assets/2. Fonts/Helvetica Neue - OTF/HelveticaNeueLTStd-MdCn.otf") ;
+    font-weight: normal;
+    font-stretch: condensed;
+}
+:root {
+    --blue: #31C4F3;
+    --orange: #f8992c81;
+    --orange-opaque:#F89A2C;
+    --green: #1fbb00;
+    --red: rgb(255, 0, 0);
+    --navy: #033C54;
+    --darkblue: #010c10;
+}
+* {
+    box-sizing: border-box;
+}
+  
+  /* Style the body */
+body {
+    font-family: Helvetica, sans-serif;
+    margin: 0;
+    font-stretch: condensed;
+}
+
+li {
+    list-style: none;
+}
+.all_players ul {
+    display: inline-block;
+}
+.all_players ul:nth-child(2) {
+    margin-left: 0.5em;
+    margin-right: 0.75em;
+}
+  /* Header/logo Title */
+.header {
+    padding: 20px;
+    text-align: center;
+    background: var(--navy);
+    color: white;
+}
+  
+  /* Increase the font size of the heading */
+.header h1 {
+    font-size: 40px;
+}
+   
+  /* Column container */
+.columns {  
+    display: flex;
+    flex-wrap: wrap;
+}
+  
+table {
+    width: 100%;
+
+}
+th {
+    font-size: 20px;
+}
+  /* Sidebar/left column */
+.side {
+    flex: 30%;
+    background-color: var(--darkblue);
+    padding: 20px;
+    color: white;
+}
+
+  /* Main column */
+.main {   
+    flex: 70%;
+    background-color: white;
+    padding: 20px;
+}
+#questionText{
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-top: 1em;
+    margin-bottom: 1em;
+} 
+#roundText{
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    text-align: center;
+}
+#roundNumber{
+    font-size: 1em;
+    font-weight: bold;
+    margin-top: .5em;
+    margin-bottom: 1em;
+    text-align: center;
+}
+.answer{
+    border: 5px solid var(--orange-opaque);
+    padding: 15px;
+    margin: 10px;
+    font-size: 16px;
+    color: black;
+    background-color: white;
+
+}
+.answer:hover{
+    color: white;
+    background-color: var(--orange-opaque);
+}
+.answer:disabled{
+    color: var(--orange-opaque);
+    background-color: white;
+
+}
+.answer:not(disabled){
+    color: black;
+}
+.correct {
+    border-color: var(--green);
+}
+.incorrect {
+    border-color: var(--red);
+}
+.selected, .selected:disabled{
+    color: black;
+    background-color: var(--orange) ;
+}
+.all_players .right {
+    color:var(--green);
+}
+.all_players .wrong {
+    color: var(--red);
+}
+.all_players .noanswer {
+    color: rgb(172, 172, 172);
+}
+  /* Footer */
+.footer {
+    padding: 20px;
+    text-align: center;
+    background: var(--orange-opaque);
+}
+  
+  /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+    .columns {   
+      flex-direction: column;
+    }
+}
