@@ -30,7 +30,7 @@
 body {
     padding: 0;
     margin: 0;
-    font-family: 'Roboto', HelveticaNeue , sans-serif;
+    font-family: HelveticaNeue , 'Roboto', sans-serif;
     text-transform: uppercase;
     font-stretch: condensed;
 }
