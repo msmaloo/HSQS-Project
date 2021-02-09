@@ -21,7 +21,7 @@
     --red: red;
     --barblue:#172e37;
     --barorange: #34220e;
-    --darkblue: #010c10;
+    --darkblue: #000000;
     --barnavy: #040a0e;
     --blue: #31C4F3;
     --orange: #F89A2C;
@@ -29,6 +29,7 @@
     --transparent: rgba(255,0,0,0);
 }
 body {
+    background: var(--darkblue);
     padding: 0;
     margin: 0;
     font-family: HelveticaNeue , 'Roboto', sans-serif;
@@ -71,9 +72,6 @@ body {
 .wrong{
     box-shadow: 0 0 15px 10px var(--red);
 }
-.name{
-    
-}
 .team-name{
     font-weight: normal;
 
@@ -86,8 +84,10 @@ body {
     text-align: center;
     color: white;
 }
-.darkblue{
-    background: var(--darkblue)
+.back{
+    /* background: var(--darkblue); */
+    width:1920;
+    height:1080;
 }
 .blue{
     background: var(--blue)
@@ -153,6 +153,14 @@ body {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
 }
+#bgVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+  }
 .bganim{
     height: 1080px;
     z-index: -3;
@@ -173,20 +181,22 @@ body {
     width: 120px;
     left:-400px;
     animation-delay: -30s;
+
 }
 .bar3 {
     animation: anim 50s linear infinite;
     height: 400px;
     width: 180px;
-    left:-600px;
+    left:-680px;
     animation-delay: -40s;
 }
 .bar4 {
     animation: anim 40s linear infinite;
     height: 900px;
     width: 100px;
-    left:0px;
+    left:10px;
     animation-delay: -60s;
+    z-index:-2;
 }
 .bar5 {
     animation: anim 40s linear infinite;
@@ -208,6 +218,7 @@ body {
     width: 80px;
     left:700px;
     animation-delay: -10s;
+    z-index:-2;
 }
 .bar8 {
     animation: anim 45s linear infinite;
@@ -215,6 +226,7 @@ body {
     width: 80px;
     left:-700px;
     animation-delay: -20s;
+    z-index:-2;
 }
 .bar9 {
     animation: anim 60s linear infinite;
@@ -260,7 +272,7 @@ body {
 }
 @keyframes anim {
     0% {
-      transform:translate(0px, 0px) rotate(45deg);
+      transform:translate(0px,0px) rotate(45deg);
     }
     100% {
       transform:translate(2500px,-2500px)rotate(45deg);
