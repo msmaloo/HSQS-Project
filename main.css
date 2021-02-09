@@ -19,9 +19,10 @@
 :root {
     --green: #20bb00;
     --red: red;
-    --barblue:#0f2630;
-    --barorange: #2e2416;
+    --barblue:#172e37;
+    --barorange: #34220e;
     --darkblue: #010c10;
+    --barnavy: #040a0e;
     --blue: #31C4F3;
     --orange: #F89A2C;
     --navy: #033C54;
@@ -54,9 +55,9 @@ body {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     grid-gap: 40px;
-
 }
 .square {   
+    position: relative;
     text-align: center;
     display:grid;
     grid-template-columns: 1fr;
@@ -71,12 +72,19 @@ body {
     box-shadow: 0 0 15px 10px var(--red);
 }
 .name{
-    font-weight: bold;
-    text-align: center;
-    color: white;
+    
 }
 .team-name{
     font-weight: normal;
+
+}
+.name-text{
+    width: 100%;
+    position: absolute;
+    bottom: -.3rem;
+    font-weight: bold;
+    text-align: center;
+    color: white;
 }
 .darkblue{
     background: var(--darkblue)
@@ -84,12 +92,22 @@ body {
 .blue{
     background: var(--blue)
 }
+.barblue{
+    background: var(--barblue)
+}
 .orange{
     background: var(--orange);
+}
+.barorange{
+    background: var(--barorange);
 }
 .navy{
     background: var(--navy);
 }
+.barnavy{
+    background: var(--barnavy);
+}
+
 .parallelogram{
     font-size: 4rem;
     text-align: center;
@@ -117,7 +135,7 @@ body {
     width:100%;
     text-align: center;
     position: absolute;
-    top: 50%;
+    top: 55%;
     transform: translateY(-50%) skew(20deg);
 }
 .number{
@@ -136,46 +154,115 @@ body {
     grid-template-rows: 1fr;
 }
 .bganim{
-    height: 760px;
-    z-index: 1;
+    height: 1080px;
+    z-index: -3;
     position: absolute;
 }
 .bar {
-    animation: anim 8s ease-in-out infinite alternate;
-    background-image: linear-gradient(-70deg, var(--transparent) 20%, var(--barorange) 20%, var(--barorange) 21%, var(--transparent) 21%, var(--transparent) 34%, var(--barorange) 34%, var(--barorange) 37%, var(--transparent) 37% ,var(--transparent) 45% );
-    bottom:0;
-    left:-50%;
-    opacity:1;
-    position:fixed;
-    right:-50%;
-    top:0;
-    z-index:1;
+    animation: anim 60s linear infinite;
+    position: absolute;
+    z-index:-3;
+    height: 700px;
+    width: 200px;
+    top:1400px;
+    left:-12px;
 } 
 .bar2 {
-    animation-direction: alternate;
-    background-image: linear-gradient(-250deg, var(--transparent) 20%, var(--barblue) 20%, var(--barblue) 21%, var(--transparent) 21%, var(--transparent) 34%, var(--barblue) 34%, var(--barblue) 37%, var(--transparent) 37% ,var(--transparent) 45% );
-} 
-.bar3 {
-    animation-duration:12s;
-    z-index: -1;
-    background-image: linear-gradient(-70deg, var(--barorange) 8%, var(--transparent) 8%, var(--transparent) 20%, var(--barorange) 20%, var(--barorange) 26%, var(--transparent) 26%, var(--transparent) 30%, var(--barorange) 30%, var(--barorange) 35%, var(--transparent) 35%);
-    opacity: .3;
-    animation-delay: -2s;
-    animation-direction: alternate-reverse;   
+    animation: anim 50s linear infinite;
+    height: 600px;
+    width: 120px;
+    left:-400px;
+    animation-delay: -30s;
 }
-.bar4{
-    animation-duration:12s;
-    z-index: -1;
-    background-image: linear-gradient(-250deg, var(--barblue) 8%, var(--transparent) 8%, var(--transparent) 20%, var(--barblue) 20%, var(--barblue) 26%, var(--transparent) 26%, var(--transparent) 30%, var(--barblue) 30%, var(--barblue) 35%, var(--transparent) 35%);
-    opacity: .3;
-    animation-delay: -2s;
-    animation-direction: alternate-reverse;  
+.bar3 {
+    animation: anim 50s linear infinite;
+    height: 400px;
+    width: 180px;
+    left:-600px;
+    animation-delay: -40s;
+}
+.bar4 {
+    animation: anim 40s linear infinite;
+    height: 900px;
+    width: 100px;
+    left:0px;
+    animation-delay: -60s;
+}
+.bar5 {
+    animation: anim 40s linear infinite;
+    height: 700px;
+    width: 120px;
+    left:120px;
+    animation-delay: -5s;
+}
+.bar6 {
+    animation: anim 60s linear infinite;
+    height: 800px;
+    width: 160px;
+    left:240px;
+    animation-delay: -40s;
+}
+.bar7 {
+    animation: anim 45s linear infinite;
+    height: 450px;
+    width: 80px;
+    left:700px;
+    animation-delay: -10s;
+}
+.bar8 {
+    animation: anim 45s linear infinite;
+    height: 450px;
+    width: 80px;
+    left:-700px;
+    animation-delay: -20s;
+}
+.bar9 {
+    animation: anim 60s linear infinite;
+    height: 400px;
+    width: 180px;
+    left:-800px;
+    animation-delay: -10s;
+}
+.bar10 {
+    animation: anim 45s linear infinite;
+    height: 750px;
+    width: 80px;
+    left:-1600px;
+    animation-delay: -40s;
+}
+.bar11 {
+    animation: anim 50s linear infinite;
+    height: 800px;
+    width: 200px;
+    left:200px;
+    animation-delay: -100s;
+}
+.bar12 {
+    animation: anim 60s linear infinite;
+    height: 800px;
+    width: 200px;
+    left:-300px;
+    animation-delay:-90s;
+}
+.bar13 {
+    animation: anim 60s linear infinite;
+    height: 900px;
+    width: 80px;
+    left:-800px;
+    animation-delay:-90s;
+}
+.bar14 {
+    animation: anim 45s linear infinite;
+    height: 750px;
+    width: 80px;
+    left:-1600px;
+    animation-delay: -70s;
 }
 @keyframes anim {
     0% {
-      transform:translateX(-13%);
+      transform:translate(0px, 0px) rotate(45deg);
     }
     100% {
-      transform:translateX(13%);
+      transform:translate(2500px,-2500px)rotate(45deg);
     }
   }
